@@ -4,12 +4,11 @@ import bareum.commands.ByeCommand;
 import bareum.commands.Command;
 
 public class Bareum {
-    static TaskList taskList = new TaskList();
-
     public void run() {
         Ui ui = new Ui();
         Parser parser = new Parser();
         Storage storage = new Storage();
+        TaskList taskList = new TaskList();
         boolean isExit = false;
 
         storage.loadSavedTaskList(taskList);
